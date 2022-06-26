@@ -71,5 +71,23 @@ public class RegexProgram {
                 "date",
                 "time", "variable declaration", "url", "full name", "password",
                 "double precision floating point number" };
+
+        // A array of array of valid regular expressions examples.
+        String[] validRegexExamples = { "ABC123", "312-1234", "312-123-4598", "john@gmail.com", "01/01/2000",
+                "12:00:00", "int x = 10;", "https://www.google.com", "John Doe", "q8W1gFr1%C+5)_y))Tfz",
+                "1.23" };
+
+        // A array of array of invalid regular expressions examples.
+        String[] invalidRegexExamples = { "ABC123D", "3123-1234", "3123-12398", "   @gmail.com", "2000/01/01",
+                "12-00-00", "int x = 10", "smtp://google.com", "JohnDoe", "12345678", "1.2.3" };
+
+        // A array of regular expressions descriptions.
+        String[] regexDescriptions = { "A car plate number in Colombia.",
+                "A fixed-line phone number in Medellin.",
+                "A mobile phone number in Colombia.", "An email address.",
+                "A date in the format dd/mm/yyyy or dd-mm-yyyy.", "A time in the format hh:mm:ss.",
+                "A variable declaration in Java.", "A url.", "A full name in Colombia.",
+                "A password that must contain at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character.",
+                "A double precision floating point number." };
     }
 }
