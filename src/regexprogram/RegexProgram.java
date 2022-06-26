@@ -9,6 +9,8 @@
  ******************************************************************************/
 package regexprogram;
 
+import java.util.regex.Pattern;
+
 /**
  * The {@code RegexProgram} class represents a program that reads in a string
  * and prints out whether it matches the regular expression.
@@ -59,5 +61,15 @@ public class RegexProgram {
         // A regular expression that matches the double precision floating point number
         // format and the scientific notation format.
         String regex11 = "^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$";
+
+        // A array of regular expressions.
+        String[] regexes = { regex1, regex2, regex3, regex4, regex5, regex6, regex7, regex8, regex9, regex10,
+                regex11 };
+
+        // A array of regular expressions names.
+        String[] regexNames = { "car plate number", "fixed-line phone number", "mobile phone number", "email",
+                "date",
+                "time", "variable declaration", "url", "full name", "password",
+                "double precision floating point number" };
     }
 }
