@@ -89,5 +89,17 @@ public class RegexProgram {
                 "A variable declaration in Java.", "A url.", "A full name in Colombia.",
                 "A password that must contain at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character.",
                 "A double precision floating point number." };
+
+        // Prints the regular expressions.
+        for (int i = 0; i < regexes.length; i++) {
+            System.out.println("Regular expression: " + regexes[i]);
+            System.out.println("Name: " + regexNames[i]);
+            System.out.println("Valid Example: " + validRegexExamples[i] + " - Result: "
+                    + Pattern.matches(regexes[i], validRegexExamples[i]));
+            System.out.println("Invalid Example: " + invalidRegexExamples[i] + " - Result: "
+                    + Pattern.matches(regexes[i], invalidRegexExamples[i]));
+            System.out.println("Description: " + regexDescriptions[i]);
+            System.out.println();
+        }
     }
 }
