@@ -11,19 +11,19 @@ Valid Example: ABC123 - Result: true
 Invalid Example: ABC123D - Result: false
 Description: A car plate number in Colombia.
 
-Regular expression: ^[0-9]{3}-[0-9]{4}$
+Regular expression: ^[2-6][0-9]{2}-[0-9]{4}$
 Name: fixed-line phone number
 Valid Example: 312-1234 - Result: true
 Invalid Example: 3123-1234 - Result: false
 Description: A fixed-line phone number in Medellin.
 
-Regular expression: ^[0-9]{3}-[0-9]{3}-[0-9]{4}$
+Regular expression: ^3[0-5][0-9]-[0-9]{3}-[0-9]{4}$
 Name: mobile phone number
 Valid Example: 312-123-4598 - Result: true
 Invalid Example: 3123-12398 - Result: false
 Description: A mobile phone number in Colombia.
 
-Regular expression: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$
+Regular expression: ^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$
 Name: email
 Valid Example: john@gmail.com - Result: true
 Invalid Example:    @gmail.com - Result: false
@@ -41,10 +41,10 @@ Valid Example: 12:00:00 - Result: true
 Invalid Example: 12-00-00 - Result: false
 Description: A time in the format hh:mm:ss.
 
-Regular expression: ^(int|double|float|char|String)\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*[0-9]*\.?[0-9]*$
+Regular expression: ^(int|double|float)\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*[0-9]*\.?[0-9]*;$
 Name: variable declaration
-Valid Example: int x = 10; - Result: false
-Invalid Example: int x = 10 - Result: true
+Valid Example: int x = 10; - Result: true
+Invalid Example: int x = 10 - Result: false
 Description: A variable declaration in Java.
 
 Regular expression: ^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]
@@ -59,11 +59,11 @@ Valid Example: John Doe - Result: true
 Invalid Example: JohnDoe - Result: false
 Description: A full name in Colombia.
 
-Regular expression: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}$
+Regular expression: ^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$
 Name: password
-Valid Example: q8W1gFr1%C+5)_y))Tfz - Result: false
+Valid Example: q8W1gFr1%C - Result: true
 Invalid Example: 12345678 - Result: false
-Description: A password that must contain at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character.
+Description: A password that must contain at least 8 characters, one letter, one number and one special character.
 
 Regular expression: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$
 Name: double precision floating point number
